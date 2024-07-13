@@ -624,6 +624,11 @@ video {
   justify-content: space-between;
 }
 
+.bg-\[\#151618\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 22 24 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -678,7 +683,7 @@ section {
 #menu-button span {
   width: 25px;
   height: 2.5px;
-  background-color: #000;
+  background-color: #999;
   border-radius: 2px;
   transition: transform .3s ease-in-out, opacity .2s ease-in-out,
 		background-color .6s ease-in-out;

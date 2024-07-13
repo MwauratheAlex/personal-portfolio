@@ -27,7 +27,7 @@ section {
 #menu-button span {
 	width: 25px;
 	height: 2.5px;
-	background-color: #000;
+	background-color: #999;
 	border-radius: 2px;
 	transition: transform .3s ease-in-out, opacity .2s ease-in-out,
 		background-color .6s ease-in-out;
