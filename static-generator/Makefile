@@ -10,7 +10,7 @@ server:
 	@go run github.com/cosmtrek/air@v1.51.0 \
 		--build.cmd "go build  -o ${MAIN_PATH} ./*.go" --build.bin "${MAIN_PATH}" --build.delay "100" \
 		--build.exclude_dir "node_modules" \
-		--build.include_ext "go,txt" \
+		--build.include_ext "go,txt,css" \
 		--build.stop_on_error "false" \
 		--misc.clean_on_exit true
 
