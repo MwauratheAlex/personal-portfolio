@@ -4,8 +4,26 @@ import "github.com/mwaurathealex/static-generator/views/layouts"
 
 templ Index() {
     @layouts.Base() {
-        <div>
-            Hello worlds
-        </div>
+        @NavBar()
+        @Hero()
+        @About()
+        @Projects()
+        @Footer()
     }
+}
+
+templ NavBar() {
+    <nav>Navbar</nav>
+}
+templ Hero() {
+    <section>Hero</section>
+}
+templ About() {
+    <section>About</section>
+}
+templ Projects() {
+    <section>Projects</section>
+}
+templ Footer() {
+    <footer>Footer</footer>
 }

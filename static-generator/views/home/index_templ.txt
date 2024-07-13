@@ -1,1 +1,9 @@
-<div>Hello worlds</div>
+ 
+ 
+ 
+ 
+<nav>Navbar</nav>
+<section>Hero</section>
+<section>About</section>
+<section>Projects</section>
+<footer>Footer</footer>

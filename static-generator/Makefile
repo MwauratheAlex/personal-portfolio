@@ -15,7 +15,7 @@ server:
 		--misc.clean_on_exit true
 
 watch-assets:
-	npx tailwindcss -i internal/assets/app.css -o public/assets/styles.css --watch
+	npx tailwindcss -i assets/app.css -o ../assets/styles.css --watch
 
 # run esbuild to generate the index.js bundle in watch mode.
 watch-esbuild:
@@ -24,7 +24,7 @@ watch-esbuild:
 
 # start app in developement
 dev:
-	@make -j5  templ server
+	@make -j5  templ server watch-assets
 	#@make -j5  templ server watch-assets sync_assets watch-esbuild
 
 # build the application for production. This will compile your app
