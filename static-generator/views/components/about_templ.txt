@@ -1,0 +1,23 @@
+<section class=\"flex\" id=\"about\"><div class=\"container flex flex-col items-end justify-start h-dvh\">
+<div class=\"flex px-4 py-2 w-full gap-20 justify-between\"><div class=\"w-full\">
+<div class=\"flex justify-between  py-4\"><pre>I love building things.<br>For longer than I can remember,<br>I have been tinkering.<br>Breaking things, Fixing things<br>We live we learn.</pre><pre>I love art too.<br>I do draw sometimes.<br>I see beauty in everything.<br>Building things, Coding things.<br>It's all I can see.</pre></div><pre>I have picked up some skills along the way -></pre><div class=\"py-4 flex flex-col\"><div class=\"flex flex-col gap-2\">
+<div class=\"flex flex-col gap-4\"><div>
+<pre>Jomo Kenyatta University of Agriculture and Technology</pre></div><div>
+<pre>ALX Africa</pre></div><div>
+<pre>Alliance High School</pre></div></div></div></div><div class=\"flex justify-between w-full gap-4 mt-2\"><button class=\"w-full font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-300 py-4 rounded-md\">Download my Cv</button> <button id=\"message-btn\" class=\"w-full text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-4 rounded-md\">Leave me a message</button></div></div><div class=\"w-full\"><div class=\"w-full mb-4\">
+</div>
+<div class=\"grid grid-cols-6 gap-2 py-4\">
+<div class=\"text-gray-600 p-1 bg-gray-100 text-center rounded-md shadow-gray-400 shadow-md\"><pre>
+</pre></div>
+</div></div></div></div></section>
+<div class=\"parent\">
+<div class=\"
+\"><img class=\"w-12 h-12\" src=\"
+\"></div>
+</div>
+<h3 class=\" font-semibold\"><pre>
+</pre></h3>
+<h1 class=\"text-5xl font-semibold pt-16 pr-4\"><pre>
+</pre></h1>
+<h2 class=\"text-2xl font-semibold\">
+</h2>
