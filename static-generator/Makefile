@@ -19,12 +19,12 @@ watch-assets:
 
 # run esbuild to generate the index.js bundle in watch mode.
 watch-esbuild:
-	npx esbuild internal/assets/index.js --bundle --outdir=public/assets --watch=forever
+	npx esbuild assets/app.js --bundle --outdir=../assets --watch=forever
 
 
 # start app in developement
 dev:
-	@make -j5  templ server watch-assets
+	@make -j5  templ server watch-assets watch-esbuild
 	#@make -j5  templ server watch-assets sync_assets watch-esbuild
 
 # build the application for production. This will compile your app
