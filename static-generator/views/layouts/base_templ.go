@@ -26,7 +26,7 @@ func Base() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Mwaura Mbugua | Personal Portfolio Website</title><link rel=\"stylesheet\" href=\"assets/styles.min.css\"><script src=\"assets/app.js\" defer></script><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap\" rel=\"stylesheet\"><script src=\"https://code.tidio.co/2kq8zlbbf0fdxoh9mgl3cep9faa3qo53.js\" async></script></head><body class=\"relative\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -34,7 +34,7 @@ func Base() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"assets/gsap.min.js\"></script><script src=\"assets/ScrollTrigger.min.js\"></script><script src=\"assets/lenis.min.js\"></script><script>\n\t\t// lenis smooth scrolling\n\t\tconst lenis = new Lenis()\n\n\t\tlenis.on('scroll', ScrollTrigger.update)\n\n\t\tgsap.ticker.add((time) => {\n\t\t\tlenis.raf(time * 1000)\n\t\t})\n\n\t\tgsap.ticker.lagSmoothing(0)\n\t</script></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
