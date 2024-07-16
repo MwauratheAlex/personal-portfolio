@@ -3,15 +3,23 @@ package components
 import "fmt"
 import "github.com/mwaurathealex/static-generator/data"
 
+templ SectionWrapper() {
+	<div class="h-dvh">
+		<div class="pt-14">
+			{ children... }
+		</div>
+	</div>
+}
+
 templ About() {
-	<section class="flex" id="about">
-		<div class="container flex flex-col items-end justify-start h-dvh">
+	<section class="flex pt-12 md:pt-16 relative overflow-hidden justify-start" id="about">
+		<div class="container overflow-hidden flex flex-col pb-16">
 			@SectionHeading("About")
-			<div class="flex px-4 py-2 w-full gap-20 justify-between">
-				<div class="w-full">
+			<div class="flex flex-col md:flex-row md:px-4 md:py-2 w-full md:gap-20 justify-between">
+				<div class="w-full flex gap-2 flex-col">
 					@SectionSubHeading("Get to know me!")
-					<div class="flex justify-between  py-4">
-						<pre>
+					<div class="flex justify-between md:py-4">
+						<pre class="whitespace-pre-wrap w-full text-sm md:text-base">
 							I love building things.
 							<br/>
 							For longer than I can remember,
@@ -22,7 +30,7 @@ templ About() {
 							<br/>
 							We live we learn.
 						</pre>
-						<pre>
+						<pre class="hidden md:block">
 							I love art too.
 							<br/>
 							I do draw sometimes.
@@ -34,51 +42,58 @@ templ About() {
 							It's all I can see.
 						</pre>
 					</div>
-					<pre>I have picked up some skills along the way -></pre>
-					<div class="py-4 flex flex-col">
+					<pre class="hidden md:block">I have picked up some skills along the way -></pre>
+					<div class="md:py-4 flex flex-col">
 						<div class="flex flex-col gap-2">
 							@SectionSubHeading("My education background")
-							<div class="flex flex-col gap-4">
+							<div class="flex flex-col gap-2 md:gap-4">
 								<div>
 									@SectionHeading3("> BSc. Electrical and Electronic Engineering")
-									<pre>Jomo Kenyatta University of Agriculture and Technology</pre>
+									<pre class="whitespace-pre-wrap w-full text-sm md:text-base">
+										Jomo Kenyatta University of Agriculture and
+										Technology
+									</pre>
 								</div>
 								<div>
 									@SectionHeading3("> Software Engineering")
-									<pre>ALX Africa</pre>
+									<pre class="whitespace-pre-wrap w-full text-sm md:text-base">ALX Africa</pre>
 								</div>
 								<div>
 									@SectionHeading3("> HighSchool Diploma")
-									<pre>Alliance High School</pre>
+									<pre class="whitespace-pre-wrap w-full text-sm md:text-base">Alliance High School</pre>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="flex justify-between w-full gap-4 mt-2">
+					<div
+						class="pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto"
+					>
 						<button
-							class="w-full font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-300 py-4 rounded-md"
+							class="flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-4 rounded-md px-4 md:px-6"
 						>
-							Download my
-							Cv
+							Download CV
 						</button>
 						<button
 							id="message-btn"
-							class="w-full text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-4 rounded-md"
+							class="flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-4 rounded-md px-4 md:px-6"
 						>
-							Leave me a
-							message
+							Contact me
 						</button>
 					</div>
 				</div>
-				<div class="w-full">
-					<div class="w-full mb-4">
+				<div class="w-full relative">
+					<div
+						class="-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto"
+					>
 						@SkillIcons()
 					</div>
-					@SectionSubHeading("Skills")
-					<div class="grid grid-cols-6 gap-2 py-4">
+					<div class="mt-14 md:mt-7">
+						@SectionSubHeading("Skills")
+					</div>
+					<div class="grid grid-cols-4 md:grid-cols-6 gap-2 md:gap-4 py-1 md:py-4">
 						for _, skill := range data.Skills {
 							<div class="text-gray-600 p-1 bg-gray-100 text-center rounded-md shadow-gray-400 shadow-md">
-								<pre>{ skill.Name }</pre>
+								<pre class="text-sm md:text-base">{ skill.Name }</pre>
 							</div>
 						}
 					</div>
@@ -91,8 +106,8 @@ templ About() {
 templ SkillIcons() {
 	<div class="parent">
 		for i, skill := range data.Skills {
-			<div class={ fmt.Sprintf("%s%s p-2 border flex items-end justify-center rounded-md", "div", fmt.Sprint(i+1)) }>
-				<img class="w-12 h-12" src={ fmt.Sprintf("assets/images/icons/%s", skill.Img) }/>
+			<div class={ fmt.Sprintf("%s%s p-2 md:border flex items-end justify-center rounded-md", "div", fmt.Sprint(i+1)) }>
+				<img class="w-6 h-6 md:w-12 md:h-12" src={ fmt.Sprintf("assets/images/icons/%s", skill.Img) }/>
 			</div>
 		}
 	</div>
@@ -103,18 +118,18 @@ templ SkillIcons() {
 //}
 templ SectionHeading3(text string) {
 	<h3 class=" font-semibold">
-		<pre>{ text }</pre>
+		<pre class="whitespace-pre-wrap w-full text-sm md:text-base">{ text }</pre>
 	</h3>
 }
 
 templ SectionHeading(title string) {
-	<h1 class="text-5xl font-semibold pt-16 pr-4">
+	<h1 class="text-3xl md:text-5xl font-semibold md:pr-4 text-right">
 		<pre>{ title }</pre>
 	</h1>
 }
 
 templ SectionSubHeading(title string) {
-	<h2 class="text-2xl font-semibold">
+	<h2 class="text-lg md:text-2xl font-semibold">
 		{ title }
 	</h2>
 }

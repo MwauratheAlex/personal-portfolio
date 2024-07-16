@@ -24,7 +24,7 @@ var Skills = []Skill{
 	{Name: "Git", Img: "git.svg"},
 	{Name: "Golang", Img: "go.svg"},
 	{Name: "html", Img: "html.svg"},
-	{Name: "Javascript", Img: "js.svg"},
+	{Name: "Js", Img: "js.svg"},
 	{Name: "linux", Img: "linux.svg"},
 	{Name: "Mongodb", Img: "mongo.svg"},
 	{Name: "Node", Img: "node.svg"},

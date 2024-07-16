@@ -28,7 +28,7 @@ func NavBar() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"fixed w-full top-0  bg-gray-950 bg-opacity-20\" id=\"navbar\"><div class=\"container  flex justify-between items-center relative\"><div class=\"z-50\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"fixed w-full bg-gray-950 bg-opacity-20 top-0\" id=\"navbar\"><div class=\"container  flex justify-between items-center relative\"><div class=\"z-50\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -36,7 +36,7 @@ func NavBar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><ul class=\"hidden absolute md:relative md:flex flex-col md:flex-row\" id=\"\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><ul class=\"hidden  md:flex flex-col md:flex-row\" id=\"\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -57,7 +57,7 @@ func NavBar() templ.Component {
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(item.Label)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 15, Col: 22}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 15, Col: 19}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
@@ -89,7 +89,7 @@ func NavBar() templ.Component {
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(item.Label)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 25, Col: 24}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 25, Col: 20}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -108,7 +108,7 @@ func NavBar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div><script>\n    const menuButton = document.querySelector('#menu-button')\n    const rootElement = document.documentElement\n    const navBtns = document.querySelectorAll(\".menu-btn\")\n\n    function toggleMenu() {\n      rootElement.toggleAttribute('menu-open')\n      console.log(\"here\")\n    }\n\n    menuButton.addEventListener('click', () => {\n      rootElement.toggleAttribute('menu-open')\n    })\n  </script></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div><script>\n\t\tconst menuButton = document.querySelector('#menu-button')\n\t\tconst rootElement = document.documentElement\n\t\tconst navBtns = document.querySelectorAll(\".menu-btn\")\n\n\t\tfunction toggleMenu() {\n\t\t\trootElement.toggleAttribute('menu-open')\n\t\t}\n\n\t\tmenuButton.addEventListener('click', () => {\n\t\t\trootElement.toggleAttribute('menu-open')\n\t\t})\n\t</script></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
