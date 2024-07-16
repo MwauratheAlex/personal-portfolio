@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+	const textEl = document.getElementById("hero-anim-text");
+	const dotEl = document.getElementById("hero-anim-dot");
+
+	textEl.classList.add("animate-hero-text");
+	dotEl.classList.add("animate-hero-dot");
+});
+
 // get the magnito
 const magnito = document.querySelector('.magnito');
 const magnitoText = document.querySelector('.magnito .text');

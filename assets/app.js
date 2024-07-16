@@ -1,5 +1,11 @@
 (() => {
   // assets/app.js
+  document.addEventListener("DOMContentLoaded", () => {
+    const textEl = document.getElementById("hero-anim-text");
+    const dotEl = document.getElementById("hero-anim-dot");
+    textEl.classList.add("animate-hero-text");
+    dotEl.classList.add("animate-hero-dot");
+  });
   var magnito = document.querySelector(".magnito");
   var magnitoText = document.querySelector(".magnito .text");
   var activateMagnito = (event) => {
