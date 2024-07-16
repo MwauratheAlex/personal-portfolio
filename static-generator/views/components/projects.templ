@@ -1,0 +1,24 @@
+package components
+
+import "github.com/mwaurathealex/static-generator/data"
+import "fmt"
+
+templ Projects() {
+	<section class="flex pt-12 md:pt-16 relative overflow-hidden justify-start -z-10" id="projects">
+		<div class="container overflow-hidden flex flex-col pb-16">
+			@SectionHeading("Projects")
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-12 py-8">
+				for _, project := range data.Projects {
+					@ProjectCard(project)
+				}
+			</div>
+		</div>
+	</section>
+}
+
+templ ProjectCard(project data.Project) {
+	<div class="h-[60vh] overflow-hidden rounded-lg">
+		<img class="w-full" src={ fmt.Sprintf("assets/images/%s", project.ImageSrc) }/>
+		{ project.Title }
+	</div>
+}

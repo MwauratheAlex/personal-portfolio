@@ -63,7 +63,7 @@ func About() templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"flex pt-12 md:pt-16 relative overflow-hidden justify-start\" id=\"about\"><div class=\"container overflow-hidden flex flex-col pb-16\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"-z-10 flex pt-12 md:pt-16 relative overflow-hidden justify-start\" id=\"about\"><div class=\"container overflow-hidden flex flex-col pb-16\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

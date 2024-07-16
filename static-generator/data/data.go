@@ -34,3 +34,51 @@ var Skills = []Skill{
 	{Name: "Redis", Img: "redis.svg"},
 	{Name: "Tailwind", Img: "tailwind.svg"},
 }
+
+type Project struct {
+	Title        string
+	GitLink      string
+	LiveLink     string
+	Description  string
+	ImageSrc     string
+	Technologies string
+}
+
+var Projects = []Project{
+	{
+		Title:    "NFT Marketplace Showcase",
+		GitLink:  "https://github.com/MwauratheAlex/NFTMarketplaceShowcase.git",
+		LiveLink: "https://nftmarketplaceshowcase.on.fleek.co/",
+		ImageSrc: "nft-showcase.webp",
+	},
+	{
+		Title:    "NFT Marketplace App",
+		GitLink:  "https://github.com/MwauratheAlex/NFTMarketplace.git",
+		LiveLink: "https://nftmarketplaceshowcase.on.fleek.co/",
+		ImageSrc: "nft-marketplace.webp",
+	},
+	{
+		Title:    "Startup Landing Page",
+		GitLink:  "https://github.com/MwauratheAlex/nextjs_landing_page.git",
+		LiveLink: "https://business-landing-page-mwaura.netlify.app/",
+		ImageSrc: "landing-page.webp",
+	},
+	{
+		Title:    "GPT-3",
+		GitLink:  "https://github.com/MwauratheAlex/gpt3.git",
+		LiveLink: "https://gpt-3-mwaura.netlify.app/",
+		ImageSrc: "gpt-3.webp",
+	},
+	{
+		Title:    "Just Gym It",
+		GitLink:  "https://github.com/MwauratheAlex/gym_exercises.git",
+		LiveLink: "https://justgymit.netlify.app/",
+		ImageSrc: "justgymit.webp",
+	},
+	{
+		Title:    "MovieLand",
+		GitLink:  "https://github.com/MwauratheAlex/movieLand-react.git",
+		LiveLink: "https://movie-land-mwaura.netlify.app/",
+		ImageSrc: "movie-land.webp",
+	},
+}
