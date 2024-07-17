@@ -73,7 +73,7 @@ func ProjectCard(project data.Project) templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500  relative shadow-gray-600 md:shadow-gray-300 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0\" src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-300 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0\" src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -100,7 +100,7 @@ func ProjectCard(project data.Project) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\"><div class=\"absolute bottom-0 w-full h-full bg-orange-500 opacity-5\"></div><div class=\"p-4 bg-gray-900 rounded-lg bg-opacity-80  group-hover:bg-opacity-90 shadow-gray-800 shadow-lg absolute bottom-0 w-full py-8\"><div class=\"w-full px-2\"><pre class=\"font-semibold text-lg text-gray-100 group-hover:text-gray-300 project-text-shadow\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\"><div class=\"absolute bottom-0 w-full h-full bg-orange-500 opacity-5\"></div><div class=\"p-4 transition-all duration-1000 bg-gray-900 rounded-lg bg-opacity-80 group-hover:bg-opacity-90 shadow-gray-800 shadow-lg absolute bottom-0 w-full py-8\"><div class=\"w-full px-2\"><pre class=\"font-semibold text-lg text-gray-300 group-hover:text-gray-300 project-text-shadow\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -113,7 +113,7 @@ func ProjectCard(project data.Project) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</pre><pre class=\"transition-all whitespace-pre-wrap h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 text-blue-300 project-text-shadow\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</pre><pre class=\"transition-all duration-500 whitespace-pre-wrap max-h-0 opacity-0 group-hover:max-h-56 group-hover:opacity-90 text-blue-300 project-text-shadow overflow-hidden py-1\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

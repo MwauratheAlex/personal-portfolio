@@ -8,16 +8,16 @@ templ NavBar() {
 		<div class="z-50">
 			@Logo()
 		</div>
-		<ul class="hidden  md:flex flex-col md:flex-row" id="">
+		<ul class="hidden md:flex md:flex-row" id="">
 			for _, item := range data.NavLinks {
 			<li class="uppercase font-semibold text-gray-500 hover:translate-x-1 transition-transform">
-				<a href={ templ.SafeURL(item.Link) } class="px-4 py-4 hover:text-gray-400 transition-colors ">
+				<a href={ templ.SafeURL(item.Link) } class="px-4 py-4 hover:text-gray-400 transition-colors">
 					{ item.Label }
 				</a>
 			</li>
 			}
 		</ul>
-		<div id="menu-container">
+		<div id="menu-container" class="overflow-hidden">
 			<ul class="md:hidden" onclick="toggleMenu()">
 				for _, item := range data.NavLinks {
 				<li class="uppercase font-semibold text-gray-700 hover:text-[#6e32ef]">
