@@ -28,7 +28,7 @@ func NavBar() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"fixed w-full bg-gray-950 bg-opacity-20 top-0\" id=\"navbar\"><div class=\"container  flex justify-between items-center relative\"><div class=\"z-50\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"fixed w-full z-50 bg-gray-950 bg-opacity-20 top-0\" id=\"navbar\"><div class=\"container  flex justify-between items-center relative\"><div class=\"z-50\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
