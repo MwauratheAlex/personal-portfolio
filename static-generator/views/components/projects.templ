@@ -4,87 +4,77 @@ import "github.com/mwaurathealex/static-generator/data"
 import "fmt"
 
 templ Projects() {
-	<section class="flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0" id="projects">
-		<div class="container overflow-hidden flex flex-col pb-16">
-			@SectionHeading("Projects")
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mg:gap-y-12 py-4 md:py-8">
-				for _, project := range data.Projects {
-					@ProjectCard(project)
-				}
-			</div>
+<section class="flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0" id="projects">
+	<div class="container overflow-hidden flex flex-col pb-16">
+		@SectionHeading("Projects")
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mg:gap-y-12 py-4 md:py-8">
+			for _, project := range data.Projects {
+			@ProjectCard(project)
+			}
 		</div>
-	</section>
+	</div>
+</section>
 }
 
 templ ProjectCard(project data.Project) {
+<div
+	class="h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500  relative shadow-gray-600 md:shadow-gray-300 shadow-lg group cursor-pointer">
+	<img class="w-full absolute top-0 right-0" src={ fmt.Sprintf("assets/images/%s", project.ImageSrc) } alt={
+		project.Title } />
+	<div class="absolute bottom-0 w-full h-full bg-orange-500 opacity-5"></div>
 	<div
-		class="h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500  relative shadow-gray-600 md:shadow-gray-300 shadow-lg group cursor-pointer"
-	>
-		<img
-			class="w-full absolute top-0 right-0 "
-			src={ fmt.Sprintf("assets/images/%s", project.ImageSrc) }
-			alt={ project.Title }
-		/>
-		<div
-			class="p-4 bg-gray-900 rounded-lg bg-opacity-60  group-hover:bg-opacity-90 shadow-gray-800 shadow-lg absolute bottom-0 w-full py-8"
-		>
-			<div class="w-full px-2">
-				<pre class="font-semibold text-lg text-gray-100 group-hover:text-gray-300 project-text-shadow">
-					{ project.Title }
-				</pre>
-				<pre
-					class="transition-all whitespace-pre-wrap h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 text-blue-300 project-text-shadow"
-				>
-					{ project.Description }
-				</pre>
-				@ProjectCardIcons()
+		class="p-4 bg-gray-900 rounded-lg bg-opacity-80  group-hover:bg-opacity-90 shadow-gray-800 shadow-lg absolute bottom-0 w-full py-8">
+		<div class="w-full px-2">
+			<pre class="font-semibold text-lg text-gray-100 group-hover:text-gray-300 project-text-shadow">
+				{ project.Title }
+			</pre>
+			<pre
+				class="transition-all whitespace-pre-wrap h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 text-blue-300 project-text-shadow">
+				{ project.Description }
+			</pre>
+			<div class="flex gap-2 text-sm">
+				for _, tech := range project.Technologies {
+				<pre class={ fmt.Sprintf("project-text-shadow text-[%s]", data.TechColors[tech]) }>#{ tech }</pre>
+				}
 			</div>
+			@ProjectCardIcons(project)
 		</div>
 	</div>
+</div>
 }
 
 templ ProjectIconsItem(link string, title string) {
-	<li
-		class="text-center bg-orange-500 w-full group-hover:bg-orange-500 bg-opacity-60 rounded-md border border-gray-500 border-opacity-50 transition-colors duration-500"
-	>
-		<a aria-label="link to github" href={ templ.SafeURL(link) } class="flex justify-center items-center">
-			<span class="">
-				{ children... }
-			</span>
-			<pre class="font-semibold text-gray-900">
-				{ title }
-			</pre>
-		</a>
-	</li>
+<li
+	class="text-center bg-orange-500 w-full group-hover:bg-orange-500 bg-opacity-60 rounded-md border border-gray-500 border-opacity-50 transition-colors duration-500">
+	<a aria-label="link to github" href={ templ.SafeURL(link) } class="flex justify-center items-center">
+		<span class="">
+			{ children... }
+		</span>
+		<pre class="font-semibold text-gray-900">
+			{ title }
+		</pre>
+	</a>
+</li>
 }
 
-templ ProjectCardIcons() {
-	<div class=" rounded-md overflow-hidden ">
-		<ul class="flex px-1 py-2 gap-2">
-			@ProjectIconsItem("https://github.com/MwauratheAlex", "Github") {
-				<svg
-					class="p-1 md:p-2 w-8 h-8 md:h-10 md:w-10"
-					xmlns="http://www.w3.org/2000/svg"
-					id="icon"
-					aria-hidden="true"
-					focusable="false"
-					viewBox="0 0 496 512"
-				>
-					<path
-						d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-					></path>
-				</svg>
-			}
-			@ProjectIconsItem("https://www.linkedin.com/in/mwaura-mbugua/", "Live") {
-				<svg class="w-8 md:w-10 h-8 md:h-10 p-1 md:p-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955"
-						stroke="#000000"
-						stroke-width="2"
-						stroke-linecap="round"
-					></path>
-				</svg>
-			}
-		</ul>
-	</div>
+templ ProjectCardIcons(project data.Project) {
+<div class=" rounded-md overflow-hidden ">
+	<ul class="flex px-1 py-2 gap-2">
+		@ProjectIconsItem(project.GitLink, "Github") {
+		<svg class="p-1 md:p-2 w-8 h-8 md:h-10 md:w-10" xmlns="http://www.w3.org/2000/svg" id="icon" aria-hidden="true"
+			focusable="false" viewBox="0 0 496 512">
+			<path
+				d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+			</path>
+		</svg>
+		}
+		@ProjectIconsItem(project.LiveLink, "Live") {
+		<svg class="w-8 md:w-10 h-8 md:h-10 p-1 md:p-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955"
+				stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+		</svg>
+		}
+	</ul>
+</div>
 }
