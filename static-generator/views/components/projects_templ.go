@@ -29,7 +29,7 @@ func Projects() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0\" id=\"projects\"><div class=\"container overflow-hidden flex flex-col pb-16\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"bg-gray-50 flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0\" id=\"projects\"><div class=\"container overflow-hidden flex flex-col pb-16\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -73,7 +73,7 @@ func ProjectCard(project data.Project) templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-300 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0\" src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-500 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0\" src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

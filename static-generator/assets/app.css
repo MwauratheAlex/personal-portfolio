@@ -144,6 +144,13 @@ html.lenis body {
 	height: 100vh;
 }
 
+.contact-img {
+	background: linear-gradient(to right, rgba(0, 9, 1, 0.3), rgba(0, 8, 1, 0.3)), url("images/common-bg.svg");
+	background-position: center;
+	z-index: -1;
+	height: 100vh;
+}
+
 
 :root[menu-open] #navbar {
 	box-shadow: 0 -20px 8px 0 rgba(59, 130, 246, 0), 0 -10px 20px 0 rgba(59, 130, 246, 0);
