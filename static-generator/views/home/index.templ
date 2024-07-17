@@ -1,24 +1,24 @@
 package home
 
 import (
-	"github.com/mwaurathealex/static-generator/views/layouts"
-	"github.com/mwaurathealex/static-generator/views/components"
+"github.com/mwaurathealex/static-generator/views/layouts"
+"github.com/mwaurathealex/static-generator/views/components"
 )
 
 templ Index() {
-	@layouts.Base() {
-		@components.Hero()
-		@components.About()
-		@components.Projects()
-		@components.Contact()
-		@Footer()
-	}
+@layouts.Base() {
+@components.Hero()
+@components.About()
+@components.Projects()
+@components.Contact()
+@Footer()
+}
 }
 
 templ Contact() {
-	<section id="contact">Contact</section>
+<section id="contact">Contact</section>
 }
 
 templ Footer() {
-	<footer>Footer</footer>
+<footer>Hello Footer</footer>
 }

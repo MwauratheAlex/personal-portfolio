@@ -37,7 +37,7 @@ func Projects() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-12 py-8\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 md:grid-cols-3 gap-8 mg:gap-y-12 py-4 md:py-8\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -73,7 +73,7 @@ func ProjectCard(project data.Project) templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border-gray-50 relative shadow-gray-300 shadow-lg\"><img class=\"w-full absolute top-0 right-0 -z-10\" src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg  relative shadow-gray-600 md:shadow-gray-300 shadow-lg\"><img class=\"w-full absolute top-0 right-0 -z-10\" src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
