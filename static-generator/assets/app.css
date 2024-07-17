@@ -24,6 +24,10 @@
 	text-shadow: 0px 0px 10px black;
 }
 
+.project-text-shadow {
+	text-shadow: 0px 0px 10px black;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 }
