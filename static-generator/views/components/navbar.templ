@@ -5,12 +5,12 @@ import "github.com/mwaurathealex/static-generator/data"
 templ NavBar() {
 	<nav class="fixed w-full z-50 bg-gray-950 bg-opacity-20 top-0" id="navbar">
 		<div class="container  flex justify-between items-center relative">
-			<div class="z-50">
+			<div class="z-50 nav__logo">
 				@Logo()
 			</div>
-			<ul class="hidden md:flex md:flex-row" id="">
+			<ul class="hidden md:flex md:flex-row" id="navlinks__container">
 				for _, item := range data.NavLinks {
-					<li class="uppercase font-semibold text-gray-500 hover:translate-x-1 transition-transform">
+					<li class="uppercase font-semibold text-gray-500 hover:translate-x-1 transition-transform nav__element">
 						<a href={ templ.SafeURL(item.Link) } class="px-4 py-4 hover:text-gray-400 transition-colors">
 							{ item.Label }
 						</a>
@@ -49,7 +49,7 @@ templ NavBar() {
 }
 
 templ MenuButton() {
-	<button class="button" id="menu-button" aria-label="Menu Button">
+	<button class="button nav__element" id="menu-button" aria-label="Menu Button">
 		<span></span>
 		<span></span>
 		<span></span>

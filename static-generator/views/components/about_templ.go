@@ -79,7 +79,7 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex justify-between md:py-4\"><pre class=\"whitespace-pre-wrap w-full text-sm md:text-base\">I love building things.<br>For longer than I can remember,<br>I have been tinkering.<br>Breaking things, Fixing things<br>We live we learn.</pre><pre class=\"hidden md:block\">I love art too.<br>I do draw sometimes.<br>I see beauty in everything.<br>Building things, Coding things.<br>It's all I can see.</pre></div><pre class=\"hidden md:block\">I have picked up some skills along the way -></pre><div class=\"md:py-4 flex flex-col\"><div class=\"flex flex-col gap-2\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<pre class=\"whitespace-pre-wrap w-full text-sm md:text-base py-2\">Hello, My name is Mbugua. I am an Engineer based in Nairobi, Kenya. I love building things. I have experience working in the fields of <span class=\"font-semibold\">Robotics</span>, <span class=\"font-semibold\">Embedded systems</span>, and <span class=\"font-semibold\">Web developement</span>.<br><br><span class=\"hidden md:block\">I led the develpment of a <span class=\"font-semibold\">mobile assembly robot</span> with a 6dof robotic arm at Jkuat Robotics Dojo. I designed and build circuits and embedded systems for milk and oil atms at Psalmchmart Ltd. I specialized in back-end developement at Alx Africa gaining skills in C, python, Javascript, Node, Redis and Git.</span></pre><div class=\" flex flex-col\"><div class=\"flex flex-col gap-2\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -87,7 +87,7 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col gap-2 md:gap-4\"><div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col gap-2 md:gap-4 mb-4\"><div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -103,15 +103,7 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<pre class=\"whitespace-pre-wrap w-full text-sm md:text-base\">ALX Africa</pre></div><div>")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = SectionHeading3("> HighSchool Diploma").Render(ctx, templ_7745c5c3_Buffer)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<pre class=\"whitespace-pre-wrap w-full text-sm md:text-base\">Alliance High School</pre></div></div></div></div><div class=\"pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto\"><button class=\"flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-4 rounded-md px-4 md:px-6\">Download CV</button> <button id=\"message-btn\" class=\"flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-4 rounded-md px-4 md:px-6\">Contact me</button></div></div><div class=\"w-full relative\"><div class=\"-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<pre class=\"whitespace-pre-wrap w-full text-sm md:text-base\">ALX Africa</pre></div></div></div></div><div class=\"pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto\"><button class=\"flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-2 rounded-md px-4 md:px-6\">Download CV</button> <button id=\"message-btn\" class=\"flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-2 rounded-md px-4 md:px-6\">Contact me</button></div></div><div class=\"w-full relative\"><div class=\"-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -119,7 +111,7 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"mt-14 md:mt-7\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"mt-8 md:mt-7\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -139,7 +131,7 @@ func About() templ.Component {
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(skill.Name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 96, Col: 54}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 84, Col: 54}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
@@ -206,7 +198,7 @@ func SkillIcons() templ.Component {
 			var templ_7745c5c3_Var7 string
 			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(skill.Name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 110, Col: 25}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 98, Col: 25}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 			if templ_7745c5c3_Err != nil {
@@ -219,7 +211,7 @@ func SkillIcons() templ.Component {
 			var templ_7745c5c3_Var8 string
 			templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("assets/images/icons/%s", skill.Img))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 110, Col: 114}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 98, Col: 114}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 			if templ_7745c5c3_Err != nil {
@@ -263,7 +255,7 @@ func SectionHeading3(text string) templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(text)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 118, Col: 69}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 106, Col: 69}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {
@@ -302,7 +294,7 @@ func SectionHeading(title string) templ.Component {
 		var templ_7745c5c3_Var12 string
 		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 124, Col: 14}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 112, Col: 14}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 		if templ_7745c5c3_Err != nil {
@@ -341,7 +333,7 @@ func SectionSubHeading(title string) templ.Component {
 		var templ_7745c5c3_Var14 string
 		templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 130, Col: 9}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 118, Col: 9}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
 		if templ_7745c5c3_Err != nil {

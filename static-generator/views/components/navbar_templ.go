@@ -28,7 +28,7 @@ func NavBar() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"fixed w-full z-50 bg-gray-950 bg-opacity-20 top-0\" id=\"navbar\"><div class=\"container  flex justify-between items-center relative\"><div class=\"z-50\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"fixed w-full z-50 bg-gray-950 bg-opacity-20 top-0\" id=\"navbar\"><div class=\"container  flex justify-between items-center relative\"><div class=\"z-50 nav__logo\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -36,12 +36,12 @@ func NavBar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><ul class=\"hidden md:flex md:flex-row\" id=\"\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><ul class=\"hidden md:flex md:flex-row\" id=\"navlinks__container\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		for _, item := range data.NavLinks {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"uppercase font-semibold text-gray-500 hover:translate-x-1 transition-transform\"><a href=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"uppercase font-semibold text-gray-500 hover:translate-x-1 transition-transform nav__element\"><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -134,7 +134,7 @@ func MenuButton() templ.Component {
 			templ_7745c5c3_Var6 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button class=\"button\" id=\"menu-button\" aria-label=\"Menu Button\"><span></span> <span></span> <span></span></button>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button class=\"button nav__element\" id=\"menu-button\" aria-label=\"Menu Button\"><span></span> <span></span> <span></span></button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

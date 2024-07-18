@@ -66,6 +66,22 @@
   magnito.addEventListener("touchmove", activateMagnito, { passive: false });
   magnito.addEventListener("touchend", resetMagnito);
   magnito.addEventListener("touchcancel", resetMagnito);
+  var navElements = document.querySelectorAll(".nav__element");
+  var navLogo = document.querySelector(".nav__logo");
+  console.log(navLogo);
+  gsap.set(navLogo, { opacity: 0, x: -50 });
+  gsap.set(navElements, { opacity: 0 });
+  gsap.to(navLogo, {
+    opacity: 1,
+    duration: 1,
+    x: 0
+  });
+  gsap.to(navElements, {
+    opacity: 1,
+    duration: 2,
+    stagger: 0.1,
+    ease: "bounce.out"
+  });
   var sectionHeadings = document.querySelectorAll(".section__heading");
   gsap.set(sectionHeadings, { x: 100 });
   sectionHeadings.forEach((heading) => {

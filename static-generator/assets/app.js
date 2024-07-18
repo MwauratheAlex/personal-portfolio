@@ -88,6 +88,26 @@ magnito.addEventListener('touchend', resetMagnito);
 magnito.addEventListener('touchcancel', resetMagnito);
 
 // general animation stuff
+// navbar elements
+const navElements = document.querySelectorAll('.nav__element');
+const navLogo = document.querySelector('.nav__logo');
+console.log(navLogo);
+
+gsap.set(navLogo, { opacity: 0, x: -50 });
+gsap.set(navElements, { opacity: 0 });
+
+gsap.to(navLogo, {
+	opacity: 1,
+	duration: 1,
+	x: 0,
+});
+gsap.to(navElements, {
+	opacity: 1,
+	duration: 2,
+	stagger: 0.1,
+	ease: 'bounce.out'
+});
+
 // section headings slide in from right
 const sectionHeadings = document.querySelectorAll('.section__heading');
 gsap.set(sectionHeadings, { x: 100 });
