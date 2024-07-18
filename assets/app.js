@@ -5,6 +5,19 @@
     const dotEl = document.getElementById("hero-anim-dot");
     textEl.classList.add("animate-hero-text");
     dotEl.classList.add("animate-hero-dot");
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxNhcHCtarNOEDtg_z9xxhWjDlnQxLZltNrf-XqhNLQ7GY7wza8wGe3CDnrdLpj4J3a/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) }).then((_) => {
+        msg.innerHTML = "message sent";
+        setTimeout(() => {
+          msg.innerHTML = "";
+        }, 3e3);
+        form.reset();
+      }).catch((error) => console.error("Error!", error.message));
+    });
   });
   var magnito = document.querySelector(".magnito");
   var magnitoText = document.querySelector(".magnito .text");
