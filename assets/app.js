@@ -66,5 +66,16 @@
   magnito.addEventListener("touchmove", activateMagnito, { passive: false });
   magnito.addEventListener("touchend", resetMagnito);
   magnito.addEventListener("touchcancel", resetMagnito);
-  var nav = document.querySelector();
+  var sectionHeadings = document.querySelectorAll(".section__heading");
+  gsap.set(sectionHeadings, { x: 100 });
+  sectionHeadings.forEach((heading) => {
+    gsap.to(heading, {
+      scrollTrigger: {
+        trigger: heading,
+        start: "top bottom",
+        toggleActions: "play none none reset"
+      },
+      x: 0
+    });
+  });
 })();

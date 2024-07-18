@@ -295,7 +295,7 @@ func SectionHeading(title string) templ.Component {
 			templ_7745c5c3_Var11 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"text-3xl md:text-5xl font-semibold md:pr-4 text-right text__right\"><pre>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"text-3xl md:text-5xl font-semibold md:pr-2 text-right section__heading\"><pre>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

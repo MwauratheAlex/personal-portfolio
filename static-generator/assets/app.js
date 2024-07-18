@@ -88,8 +88,19 @@ magnito.addEventListener('touchend', resetMagnito);
 magnito.addEventListener('touchcancel', resetMagnito);
 
 // general animation stuff
-// nav opacity
-const nav = document.querySelector()
+// section headings slide in from right
+const sectionHeadings = document.querySelectorAll('.section__heading');
+gsap.set(sectionHeadings, { x: 100 });
+sectionHeadings.forEach((heading) => {
+	gsap.to(heading, {
+		scrollTrigger: {
+			trigger: heading,
+			start: 'top bottom',
+			toggleActions: 'play none none reset',
+		},
+		x: 0,
+	});
+});
 // const entries = document.querySelectorAll('.entry');
 // 
 // entries.forEach((entry) => {
