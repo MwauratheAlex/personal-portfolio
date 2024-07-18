@@ -102,7 +102,7 @@ templ SkillIcons() {
 <div class="parent">
 	for i, skill := range data.Skills {
 	<div class={ fmt.Sprintf("%s%s p-2 md:border flex items-end justify-center rounded-md", "div" , fmt.Sprint(i+1)) }>
-		<img class="w-6 h-6 md:w-12 md:h-12" src={ fmt.Sprintf("assets/images/icons/%s", skill.Img) } />
+		<img alt={ skill.Name } class="w-6 h-6 md:w-12 md:h-12" src={ fmt.Sprintf("assets/images/icons/%s", skill.Img) } />
 	</div>
 	}
 </div>
