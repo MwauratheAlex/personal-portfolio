@@ -91,10 +91,6 @@ magnito.addEventListener('touchcancel', resetMagnito);
 // navbar elements
 const navElements = document.querySelectorAll('.nav__element');
 const navLogo = document.querySelector('.nav__logo');
-console.log(navLogo);
-
-gsap.set(navLogo, { opacity: 0, x: -50 });
-gsap.set(navElements, { opacity: 0 });
 
 gsap.to(navLogo, {
 	opacity: 1,

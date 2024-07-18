@@ -68,9 +68,6 @@
   magnito.addEventListener("touchcancel", resetMagnito);
   var navElements = document.querySelectorAll(".nav__element");
   var navLogo = document.querySelector(".nav__logo");
-  console.log(navLogo);
-  gsap.set(navLogo, { opacity: 0, x: -50 });
-  gsap.set(navElements, { opacity: 0 });
   gsap.to(navLogo, {
     opacity: 1,
     duration: 1,
