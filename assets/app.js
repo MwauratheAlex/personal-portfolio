@@ -67,9 +67,7 @@
   magnito.addEventListener("touchend", resetMagnito);
   magnito.addEventListener("touchcancel", resetMagnito);
   var entries = document.querySelectorAll(".entry");
-  console.log(entries);
   entries.forEach((entry) => {
-    let entryLeft = entry.querySelector(".entry__left");
     const textRight = entry.querySelector(".text__right");
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -79,11 +77,6 @@
         scrub: true
       }
     });
-    tl.fromTo(
-      entryLeft,
-      { xPercent: -100, opacity: 0 },
-      { xPercent: 0, opacity: 1 }
-    );
     tl.fromTo(
       textRight,
       { xPercent: 0, opacity: 0 },

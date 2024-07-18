@@ -5,7 +5,7 @@ import "fmt"
 
 templ Projects() {
 	<section class="bg-gray-50 flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0 entry" id="projects">
-		<div class="container overflow-hidden flex flex-col pb-16 text__right">
+		<div class="container overflow-hidden flex flex-col pb-16">
 			@SectionHeading("Projects")
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mg:gap-y-12 py-4 md:py-8">
 				for _, project := range data.Projects {

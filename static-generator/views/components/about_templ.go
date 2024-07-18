@@ -63,7 +63,7 @@ func About() templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"z-0 flex pt-12 md:pt-16 relative overflow-hidden entry justify-start\" id=\"about\"><div class=\"container overflow-hidden flex flex-col pb-16 text__right\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"z-0 flex pt-12 md:pt-16 relative overflow-hidden entry justify-start\" id=\"about\"><div class=\"container overflow-hidden flex flex-col pb-16\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -238,9 +238,6 @@ func SkillIcons() templ.Component {
 	})
 }
 
-// for i := range(8) {
-// <img id={ fmt.Sprintf("%s%s", "div" , fmt.Sprint(i+1)) } src="assets/images/icons/docker.svg" />
-// }
 func SectionHeading3(text string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -266,7 +263,7 @@ func SectionHeading3(text string) templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(text)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 121, Col: 69}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 118, Col: 69}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {
@@ -298,14 +295,14 @@ func SectionHeading(title string) templ.Component {
 			templ_7745c5c3_Var11 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"text-3xl md:text-5xl font-semibold md:pr-4 text-right\"><pre>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"text-3xl md:text-5xl font-semibold md:pr-4 text-right text__right\"><pre>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var12 string
 		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 127, Col: 14}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 124, Col: 14}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 		if templ_7745c5c3_Err != nil {
@@ -344,7 +341,7 @@ func SectionSubHeading(title string) templ.Component {
 		var templ_7745c5c3_Var14 string
 		templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 133, Col: 9}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 130, Col: 9}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
 		if templ_7745c5c3_Err != nil {

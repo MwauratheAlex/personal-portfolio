@@ -13,7 +13,7 @@ templ SectionWrapper() {
 
 templ About() {
 	<section class="z-0 flex pt-12 md:pt-16 relative overflow-hidden entry justify-start" id="about">
-		<div class="container overflow-hidden flex flex-col pb-16 text__right">
+		<div class="container overflow-hidden flex flex-col pb-16">
 			@SectionHeading("About")
 			<div class="flex flex-col md:flex-row md:px-4 md:py-2 w-full md:gap-20 justify-between">
 				<div class="w-full flex gap-2 flex-col">
@@ -113,9 +113,6 @@ templ SkillIcons() {
 	</div>
 }
 
-//for i := range(8) {
-//<img id={ fmt.Sprintf("%s%s", "div" , fmt.Sprint(i+1)) } src="assets/images/icons/docker.svg" />
-//}
 templ SectionHeading3(text string) {
 	<h3 class=" font-semibold">
 		<pre class="whitespace-pre-wrap w-full text-sm md:text-base">{ text }</pre>
@@ -123,7 +120,7 @@ templ SectionHeading3(text string) {
 }
 
 templ SectionHeading(title string) {
-	<h1 class="text-3xl md:text-5xl font-semibold md:pr-4 text-right">
+	<h1 class="text-3xl md:text-5xl font-semibold md:pr-4 text-right text__right">
 		<pre>{ title }</pre>
 	</h1>
 }
