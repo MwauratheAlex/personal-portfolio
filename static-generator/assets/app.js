@@ -99,7 +99,7 @@ gsap.to(navLogo, {
 });
 gsap.to(navElements, {
 	opacity: 1,
-	duration: 2,
+	duration: 1,
 	stagger: 0.1,
 	ease: 'bounce.out'
 });
