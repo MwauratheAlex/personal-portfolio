@@ -34,7 +34,7 @@ func Hero() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col items-center  text-center h-screen justify-end container py-20 opacity-0 nav__element\"><div class=\"flex flex-col items-center mb-8 flex-1 justify-end\"><!-- Placeholder for LCP --><svg viewBox=\"0 0 400 160\" class=\"w-full\"><text x=\"50%\" y=\"50%\" dy=\".32em\" text-anchor=\"middle\" class=\"text-body\" id=\"hero-anim-text\">mbugua</text> <text x=\"50%\" y=\"50%\" dx=\"2.3em\" dy=\".32em\" text-anchor=\"middle\" class=\" dot\" id=\"hero-anim-dot\">.</text></svg><div><p class=\"text-3xl md:text-5xl\">Let's code some</p><p class=\"bg-red-800 bg-opacity-80 rounded-lg block w-full text-white text-4xl md:text-7xl px-4 py-2 mt-4\">Magic</p></div></div><!-- Air --><a href=\"#projects\" class=\"magnito flex-none mt-8\"><span class=\"text text-white font-black\">My Work</span></a></div></section>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col items-center  text-center h-screen justify-end container py-20\"><div class=\"flex flex-col items-center mb-8 flex-1 justify-end\"><!-- Placeholder for LCP --><svg viewBox=\"0 0 400 160\" class=\"w-full\"><text x=\"50%\" y=\"50%\" dy=\".32em\" text-anchor=\"middle\" class=\"text-body\" id=\"hero-anim-text\">mbugua</text> <text x=\"50%\" y=\"50%\" dx=\"2.3em\" dy=\".32em\" text-anchor=\"middle\" class=\" dot\" id=\"hero-anim-dot\">.</text></svg><div><p class=\"text-3xl md:text-5xl\">Let's code some</p><p class=\"bg-red-800 bg-opacity-80 rounded-lg block w-full text-white text-4xl md:text-7xl px-4 py-2 mt-4\">Magic</p></div></div><!-- Air --><a href=\"#projects\" class=\"magnito flex-none mt-8\"><span class=\"text text-white font-black\">My Work</span></a></div></section>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -103,7 +103,7 @@ func SocialIcons() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"absolute left-0 rounded-md overflow-hidden opacity-0 nav__element\"><ul class=\"flex flex-col gap-2 px-1 py-2 bg-gray-100 bg-opacity-60\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"absolute left-0 rounded-md overflow-hidden\"><ul class=\"flex flex-col gap-2 px-1 py-2 bg-gray-100 bg-opacity-60\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
