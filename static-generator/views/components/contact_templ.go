@@ -26,7 +26,7 @@ func Contact() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0\" id=\"contact\"><div class=\"flex-grow  container overflow-hidden flex flex-col justify-center pb-16\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0 entry\" id=\"contact\"><div class=\"flex-grow  container overflow-hidden flex flex-col justify-center pb-16  text__right\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+	// text animation
 	const textEl = document.getElementById("hero-anim-text");
 	const dotEl = document.getElementById("hero-anim-dot");
 
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const form = document.forms['submit-to-google-sheet']
 	const msg = document.getElementById("msg")
 
+	// contact form
 	form.addEventListener('submit', e => {
 		e.preventDefault()
 		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
@@ -23,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 });
 
-// get the magnito
+// magnito project button animation
 const magnito = document.querySelector('.magnito');
 const magnitoText = document.querySelector('.magnito .text');
 
@@ -84,3 +86,34 @@ magnito.addEventListener('mouseleave', resetMagnito);
 magnito.addEventListener('touchmove', activateMagnito, { passive: false });
 magnito.addEventListener('touchend', resetMagnito);
 magnito.addEventListener('touchcancel', resetMagnito);
+
+// general animation stuff
+const entries = document.querySelectorAll('.entry');
+console.log(entries)
+
+entries.forEach((entry) => {
+	let entryLeft = entry.querySelector('.entry__left');
+	const textRight = entry.querySelector('.text__right');
+
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: entry,
+			start: 'top bottom',
+			end: 'bottom 90%',
+			scrub: true
+		},
+	});
+
+	tl.fromTo(
+		entryLeft,
+		{ xPercent: -100, opacity: 0 },
+		{ xPercent: 0, opacity: 1 }
+	);
+	tl.fromTo(
+		textRight,
+		{ xPercent: 0, opacity: 0 },
+		{ xPercent: 0, opacity: 0.95 },
+		'<'
+	);
+})
+
