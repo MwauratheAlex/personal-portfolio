@@ -66,22 +66,5 @@
   magnito.addEventListener("touchmove", activateMagnito, { passive: false });
   magnito.addEventListener("touchend", resetMagnito);
   magnito.addEventListener("touchcancel", resetMagnito);
-  var entries = document.querySelectorAll(".entry");
-  entries.forEach((entry) => {
-    const textRight = entry.querySelector(".text__right");
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: entry,
-        start: "top bottom",
-        end: "bottom 90%",
-        scrub: true
-      }
-    });
-    tl.fromTo(
-      textRight,
-      { xPercent: 0, opacity: 0 },
-      { xPercent: 0, opacity: 0.95 },
-      "<"
-    );
-  });
+  var nav = document.querySelector();
 })();
