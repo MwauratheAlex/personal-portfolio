@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -13,8 +12,6 @@ import (
 
 func main() {
 	f, err := os.Create("../index.html")
-	fmt.Println("Hello")
-	fmt.Println(os.Getenv("env"))
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
 	}
