@@ -76,7 +76,7 @@ func Footer() templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<footer class=\"absolute bottom-0 w-full bg-gray-950 h-16 bg-opacity-90 flex items-center\"><div class=\"container flex text-sm justify-between items-center\"><pre class=\"text-orange-700\">Mwaura Mbugua</pre><pre class=\"text-gray-400\"><span class=\"text-base\">&copy;</span> 2024</pre><pre class=\"text-orange-700\">www.mbumwa.com</pre></div></footer>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<footer class=\"absolute bottom-0 w-full bg-gray-950 h-16 bg-opacity-90 flex items-center\"><div class=\"container flex text-sm justify-between items-center\"><pre class=\"text-orange-600\">Mwaura Mbugua</pre><pre class=\"text-gray-400\"><span class=\"text-base\">&copy;</span> 2024</pre><pre class=\"text-orange-600\">www.mbumwa.com</pre></div></footer>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
