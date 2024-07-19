@@ -145,15 +145,6 @@ html.lenis body {
 	height: 100vh;
 }
 
-/*background: linear-gradient(145deg,
-	/*		var(--ball-light-color) 0%,
-	/*		var(--ball-dark-color) 30%,
-	/*		#7843e9 85%
-	/*		/* Manually darkened color */
-/*	);*/
-
-
-
 .contact-img {
 	background: linear-gradient(to right, rgba(0, 9, 1, 0.3), rgba(0, 8, 1, 0.3)), url("images/common-bg.svg");
 	background-position: center;

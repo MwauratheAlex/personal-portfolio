@@ -1,8 +1,6 @@
 MAIN_PATH="tmp/bin/main"
 
-# run templ generation in watch mode to detect all .templ files and 
-# re-create _templ.txt files on change, then send reload event to browser. 
-# Default url: http://localhost:7331
+
 templ:
 	@templ generate --watch --proxy="http://localhost:3000" --open-browser=false
 
@@ -25,28 +23,23 @@ watch-esbuild:
 # start app in developement
 dev:
 	@make -j5  templ server watch-assets watch-esbuild
-	#@make -j5  templ server watch-assets sync_assets watch-esbuild
 
-# build the application for production. This will compile your app
-# to a single binary with all its assets embedded.
-# build:
-# 	@npx tailwindcss -i app/assets/app.css -o ./public/assets/styles.css
-# 	@npx esbuild app/assets/index.js --bundle --outdir=public/assets
-# 	@go build -o bin/app_prod cmd/app/main.go
-## Check if node and npm are installed, if not install them
-
+# build
 tailwind-build:
-	@npm install tailwindcss@3.4.4
-	npx tailwindcss -i internal/assets/app.css -o public/assets/style.min.css --minify
+	npx tailwindcss -i assets/app.css -o ../assets/styles.min.css --minify
+
 
 templ-generate:
-	go run github.com/a-h/templ/cmd/templ@latest generate
+	templ generate
 
-build: check-node
+build-esbuild:
+	npx esbuild assets/app.js --bundle --outdir=assets
+
+build:
 	make tailwind-build
-	npx esbuild internal/assets/index.js --bundle --outdir=public/assets
 	make templ-generate
-	go build -ldflags "-X main.Environment=production" -o ./bin/mbumwa3d ./cmd/main.go
+	make build-esbuild
+	go build  -o ${MAIN_PATH} ./main.go
 
 run :
 	chmod +x ./bin/mbumwa3d && ./bin/mbumwa3d
