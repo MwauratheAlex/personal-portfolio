@@ -41,7 +41,7 @@ func NavBar() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		for _, item := range data.NavLinks {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"uppercase font-semibold text-gray-500 hover:translate-x-1 transition-transform nav__element opacity-0\"><a href=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"uppercase font-semibold text-blue-200 nav-text-shadow hover:translate-x-1  transition-transform nav__element opacity-0\"><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -50,20 +50,20 @@ func NavBar() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"px-4 py-4 hover:text-gray-400 transition-colors\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\" tracking-widest \"><pre class=\"px-4 py-4\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(item.Label)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 15, Col: 19}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 16, Col: 40}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></li>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</pre></a></li>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -89,7 +89,7 @@ func NavBar() templ.Component {
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(item.Label)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 25, Col: 20}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/navbar.templ`, Line: 26, Col: 18}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -134,7 +134,7 @@ func MenuButton() templ.Component {
 			templ_7745c5c3_Var6 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button class=\"button nav__element opacity-0\" id=\"menu-button\" aria-label=\"Menu Button\"><span></span> <span></span> <span></span></button>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button class=\"button\" id=\"menu-button\" aria-label=\"Menu Button\"><span></span> <span></span> <span></span></button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -103,7 +103,7 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<pre class=\"whitespace-pre-wrap w-full text-sm md:text-base\">ALX Africa</pre></div></div></div></div><div class=\"pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto\"><button class=\"flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-2 rounded-md px-4 md:px-6\">Download CV</button> <button id=\"message-btn\" class=\"flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-2 rounded-md px-4 md:px-6\">Contact me</button></div></div><div class=\"w-full relative\"><div class=\"-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<pre class=\"whitespace-pre-wrap w-full text-sm md:text-base\">ALX Africa</pre></div></div></div></div><div class=\"pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto\"><a href=\"assets/cv.pdf\" download=\"mbugua.pdf\" class=\"flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-2 rounded-md px-4 md:px-6\">Download CV</a> <a id=\"message-btn\" href=\"#contact\" class=\"flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-2 rounded-md px-4 md:px-6\">Contact me</a></div></div><div class=\"w-full relative\"><div class=\"-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -131,7 +131,7 @@ func About() templ.Component {
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(skill.Name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 84, Col: 54}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 79, Col: 52}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
@@ -198,7 +198,7 @@ func SkillIcons() templ.Component {
 			var templ_7745c5c3_Var7 string
 			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(skill.Name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 98, Col: 25}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 93, Col: 23}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 			if templ_7745c5c3_Err != nil {
@@ -211,7 +211,7 @@ func SkillIcons() templ.Component {
 			var templ_7745c5c3_Var8 string
 			templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("assets/images/icons/%s", skill.Img))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 98, Col: 114}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 93, Col: 112}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 			if templ_7745c5c3_Err != nil {
@@ -255,7 +255,7 @@ func SectionHeading3(text string) templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(text)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 106, Col: 69}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 101, Col: 68}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {
@@ -294,7 +294,7 @@ func SectionHeading(title string) templ.Component {
 		var templ_7745c5c3_Var12 string
 		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 112, Col: 14}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 107, Col: 13}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 		if templ_7745c5c3_Err != nil {
@@ -333,7 +333,7 @@ func SectionSubHeading(title string) templ.Component {
 		var templ_7745c5c3_Var14 string
 		templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 118, Col: 9}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/about.templ`, Line: 113, Col: 8}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
 		if templ_7745c5c3_Err != nil {

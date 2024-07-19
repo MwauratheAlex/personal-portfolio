@@ -88,8 +88,34 @@ magnito.addEventListener('touchend', resetMagnito);
 magnito.addEventListener('touchcancel', resetMagnito);
 
 // general animation stuff
-// navbar elements
+// navbar
+const navbar = document.getElementById('navbar');
 const navElements = document.querySelectorAll('.nav__element');
+const home = document.getElementById('home');
+
+gsap.set(navElements, { backgroundColor: "", color: "rgba(191, 219, 254,0.8)" })
+gsap.to(navElements, {
+	color: "rgba(191, 219, 254,0.9)",
+	scrollTrigger: {
+		trigger: home,
+		start: "160% 80%",
+		end: "200% 90%",
+		scrub: true,
+	}
+});
+gsap.set(navbar, { backgroundColor: "", color: "rgba(0,0,0,0.1)" })
+gsap.to(navbar, {
+	backgroundColor: "rgba(0,0,0, 0.8)",
+	scrollTrigger: {
+		trigger: home,
+		start: "160% 80%",
+		end: "200% 90%",
+		scrub: true,
+	}
+});
+
+
+// navbar elements
 const navLogo = document.querySelector('.nav__logo');
 
 gsap.to(navLogo, {
@@ -98,7 +124,7 @@ gsap.to(navLogo, {
 	x: 0,
 });
 gsap.to(navElements, {
-	opacity: 1,
+	opacity: 0.7,
 	duration: 1,
 	stagger: 0.1,
 	ease: 'bounce.out'
