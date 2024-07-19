@@ -73,14 +73,15 @@ func ProjectCard(project data.Project) templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-500 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0 object-cover h-full\" src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-500 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0 object-right-top object-cover h-full\" src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
-		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("assets/images/%s", project.ImageSrc))
+		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("assets/images/%s",
+			project.ImageSrc))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 22, Col: 119}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 23, Col: 19}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -93,7 +94,7 @@ func ProjectCard(project data.Project) templ.Component {
 		var templ_7745c5c3_Var4 string
 		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(project.Title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 23, Col: 23}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 23, Col: 41}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
