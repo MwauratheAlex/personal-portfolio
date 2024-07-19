@@ -27,6 +27,14 @@ var Skills = []Skill{
 
 var Projects = []Project{
 	{
+		Title:        "Mbumwa3D",
+		GitLink:      "https://github.com/MwauratheAlex/mbumwa3d.git",
+		LiveLink:     "https://3d.mbumwa.com/",
+		Description:  "A 3D printing Web application built using go on the backend and htmx on the front-end, with a Sleek and Modern UI. Users can register as printers and take up orders. Users without printers can post orders to print. Payment is processed using the Mpesa Daraja Api and Data is stored in a PostgreSQL Database.The application is designed to supercharge the Maker industry in developing worlds bringing about growth in manufucturing..",
+		ImageSrc:     "mbumwa3d.webp",
+		Technologies: []string{"Go", "HTML", "CSS", "HTMX", "JavaScript"},
+	},
+	{
 		Title:        "NFT Marketplace App",
 		GitLink:      "https://github.com/MwauratheAlex/NFTMarketplace.git",
 		LiveLink:     "https://nftmarketplaceshowcase.on.fleek.co/",
@@ -83,4 +91,8 @@ var TechColors = map[string]string{
 	"Figma":       "#f24e1e",
 	"NextJs":      "#000000",
 	"ReactNative": "#00d8ff",
+	"Go":          "#00ADD8",
+	"HTML":        "#e34c26",
+	"CSS":         "#264de4",
+	"HTMX":        "#1fadc5",
 }

@@ -73,14 +73,14 @@ func ProjectCard(project data.Project) templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-500 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0\" src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"h-[60vh] overflow-hidden rounded-lg border border-gray-50 border-b-gray-500 relative shadow-gray-600 md:shadow-gray-500 shadow-lg group cursor-pointer\"><img class=\"w-full absolute top-0 right-0 object-cover h-full\" src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("assets/images/%s", project.ImageSrc))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 26, Col: 58}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 22, Col: 119}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -93,7 +93,7 @@ func ProjectCard(project data.Project) templ.Component {
 		var templ_7745c5c3_Var4 string
 		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(project.Title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 27, Col: 22}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 23, Col: 23}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
@@ -106,7 +106,7 @@ func ProjectCard(project data.Project) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(project.Title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 35, Col: 20}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 29, Col: 19}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
@@ -119,7 +119,7 @@ func ProjectCard(project data.Project) templ.Component {
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(project.Description)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 40, Col: 26}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 33, Col: 25}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
@@ -155,7 +155,7 @@ func ProjectCard(project data.Project) templ.Component {
 			var templ_7745c5c3_Var9 string
 			templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(tech)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 44, Col: 96}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 37, Col: 94}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 			if templ_7745c5c3_Err != nil {
@@ -224,7 +224,7 @@ func ProjectIconsItem(link string, title string) templ.Component {
 		var templ_7745c5c3_Var12 string
 		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 62, Col: 11}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projects.templ`, Line: 54, Col: 10}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 		if templ_7745c5c3_Err != nil {
