@@ -27,6 +27,14 @@ var Skills = []Skill{
 
 var Projects = []Project{
 	{
+		Title:        "CaseKraze",
+		GitLink:      "https://github.com/MwauratheAlex/caseKraze",
+		LiveLink:     "https://case.mbumwa.com",
+		Description:  "Capture your favourite memories with your phone, one-of-one phone case. CaseKraze allows you to protect your memories, not just your phone case.",
+		ImageSrc:     "caseKraze.webp",
+		Technologies: []string{"NextJs", "PostgreSQL", "Stripe", "Typescript"},
+	},
+	{
 		Title:        "Mbumwa3D",
 		GitLink:      "https://github.com/MwauratheAlex/mbumwa3d.git",
 		LiveLink:     "https://3d.mbumwa.com/",
@@ -86,6 +94,7 @@ var Projects = []Project{
 
 var TechColors = map[string]string{
 	"JavaScript":  "#f0db4f",
+	"Typescript":  "#f0db4f",
 	"React":       "#61dafb",
 	"Api":         "#e44d26",
 	"Figma":       "#f24e1e",
@@ -95,4 +104,6 @@ var TechColors = map[string]string{
 	"HTML":        "#e34c26",
 	"CSS":         "#264de4",
 	"HTMX":        "#1fadc5",
+	"PostgreSQL":  "#00d8ff",
+	"Stripe":      "#635bff",
 }
