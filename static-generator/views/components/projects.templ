@@ -1,7 +1,9 @@
 package components
 
-import "github.com/mwaurathealex/static-generator/data"
-import "fmt"
+import (
+	"fmt"
+	"github.com/mwaurathealex/static-generator/data"
+)
 
 templ Projects() {
 	<section class="bg-gray-50 flex pt-12 md:pt-16 relative overflow-hidden justify-start z-0 entry" id="projects">
@@ -39,6 +41,7 @@ templ ProjectCard(project data.Project) {
 				>
 					{ project.Description }
 				</pre>
+				<div class="flex flex-col gap-2"></div>
 				<div class="flex gap-2 text-sm">
 					for _, tech := range project.Technologies {
 						<pre class={ fmt.Sprintf("project-text-shadow text-[%s]", data.TechColors[tech]) }>#{ tech }</pre>
@@ -54,7 +57,7 @@ templ ProjectIconsItem(link string, title string) {
 	<li
 		class="text-center bg-orange-500 w-full group-hover:bg-orange-500 bg-opacity-60 rounded-md border border-gray-500 border-opacity-50 transition-colors duration-500"
 	>
-		<a aria-label="link to github" href={ templ.SafeURL(link) } class="flex justify-center items-center">
+		<a aria-label="link to github" target="_blank" href={ templ.SafeURL(link) } class="flex justify-center items-center">
 			<span class="">
 				{ children... }
 			</span>

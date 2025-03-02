@@ -1,19 +1,15 @@
 package home
 
 import (
-"github.com/mwaurathealex/static-generator/views/layouts"
-"github.com/mwaurathealex/static-generator/views/components"
+	"github.com/mwaurathealex/static-generator/views/components"
+	"github.com/mwaurathealex/static-generator/views/layouts"
 )
 
 templ Index() {
-@layouts.Base() {
-@components.Hero()
-@components.About()
-@components.Projects()
-@components.Contact()
-}
-}
-
-templ Contact() {
-<section id="contact">Contact</section>
+	@layouts.Base() {
+		@components.Hero()
+		@components.About()
+		@components.Projects()
+		@components.Contact()
+	}
 }

@@ -44,7 +44,7 @@ func Base() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"assets/gsap.min.js\"></script><script src=\"assets/ScrollTrigger.min.js\"></script><script src=\"assets/lenis.min.js\"></script><script>\n\t\t// lenis smooth scrolling\n\t\tconst lenis = new Lenis()\n\n\t\tlenis.on('scroll', ScrollTrigger.update)\n\n\t\tgsap.ticker.add((time) => {\n\t\t\tlenis.raf(time * 1000)\n\t\t})\n\n\t\tgsap.ticker.lagSmoothing(0)\n\t</script></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"assets/gsap.min.js\"></script><script src=\"assets/ScrollTrigger.min.js\"></script><script src=\"assets/lenis.min.js\"></script><script>\n    // lenis smooth scrolling\n    const lenis = new Lenis()\n\n    lenis.on('scroll', ScrollTrigger.update)\n\n    gsap.ticker.add((time) => {\n      lenis.raf(time * 1000)\n    })\n\n    gsap.ticker.lagSmoothing(0)\n  </script></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

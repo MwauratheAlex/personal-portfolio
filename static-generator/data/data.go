@@ -27,6 +27,14 @@ var Skills = []Skill{
 
 var Projects = []Project{
 	{
+		Title:        "mCarz",
+		GitLink:      "https://github.com/MwauratheAlex/mCarz.git",
+		LiveLink:     "https://carz.mbumwa.com/",
+		Description:  "A blazingly fast vehicle buying and selling cars.",
+		ImageSrc:     "carz.png",
+		Technologies: []string{"NextJs", "Typescript", "Mongodb"},
+	},
+	{
 		Title:        "CaseKraze",
 		GitLink:      "https://github.com/MwauratheAlex/caseKraze",
 		LiveLink:     "https://case.mbumwa.com",
@@ -98,12 +106,13 @@ var TechColors = map[string]string{
 	"React":       "#61dafb",
 	"Api":         "#e44d26",
 	"Figma":       "#f24e1e",
-	"NextJs":      "#000000",
+	"NextJs":      "#ebf0f0",
 	"ReactNative": "#00d8ff",
 	"Go":          "#00ADD8",
 	"HTML":        "#e34c26",
 	"CSS":         "#264de4",
 	"HTMX":        "#1fadc5",
 	"PostgreSQL":  "#00d8ff",
-	"Stripe":      "#635bff",
+	"Stripe":      "#cccafc",
+	"Mongodb":     "#00DA5E",
 }

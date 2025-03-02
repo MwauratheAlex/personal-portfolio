@@ -4,112 +4,120 @@ import "fmt"
 import "github.com/mwaurathealex/static-generator/data"
 
 templ SectionWrapper() {
-<div class="h-dvh">
-	<div class="pt-14">
-		{ children... }
+	<div class="h-dvh">
+		<div class="pt-14">
+			{ children... }
+		</div>
 	</div>
-</div>
 }
 
 templ About() {
-<section class="z-0 flex pt-12 md:pt-16 relative overflow-hidden entry justify-start" id="about">
-	<div class="container overflow-hidden flex flex-col pb-16">
-		@SectionHeading("About")
-		<div class="flex flex-col md:flex-row md:px-4 md:py-2 w-full md:gap-20 justify-between">
-			<div class="w-full flex gap-2 flex-col">
-				@SectionSubHeading("Get to know me!")
-				<pre class="whitespace-pre-wrap w-full text-sm md:text-base py-2">
-					Hello, My name is Mbugua.
-					I am an Engineer based in Nairobi, Kenya.
-					I love building things.
-					I have experience working in the fields of <span class="font-semibold">Robotics</span>,
-					<span class="font-semibold">Embedded systems</span>,
-					and <span class="font-semibold">Web developement</span>.
-					<br />
-					<br />
-					<span class="hidden md:block">
-						I led the develpment of a <span class="font-semibold">mobile assembly robot</span> with a 6dof robotic arm
-						at Jkuat Robotics Dojo.
-						I designed and build circuits and embedded systems for milk and oil atms at Psalmchmart Ltd. I
-						specialized in back-end developement at Alx Africa gaining skills in C, python, Javascript, Node, Redis and
-						Git.
-					</span>
-				</pre>
-				<div class=" flex flex-col">
-					<div class="flex flex-col gap-2">
-						@SectionSubHeading("My education background")
-						<div class="flex flex-col gap-2 md:gap-4 mb-4">
-							<div>
-								@SectionHeading3("> BSc. Electrical and Electronic Engineering")
-								<pre class="whitespace-pre-wrap w-full text-sm md:text-base">
-									Jomo Kenyatta University of Agriculture and
-									Technology
-								</pre>
-							</div>
-							<div>
-								@SectionHeading3("> Software Engineering")
-								<pre class="whitespace-pre-wrap w-full text-sm md:text-base">ALX Africa</pre>
+	<section class="z-0 flex pt-12 md:pt-16 relative overflow-hidden entry justify-start" id="about">
+		<div class="container overflow-hidden flex flex-col pb-16">
+			@SectionHeading("About")
+			<div class="flex flex-col md:flex-row md:px-4 md:py-2 w-full md:gap-20 justify-between">
+				<div class="w-full flex gap-2 flex-col">
+					@SectionSubHeading("Get to know me!")
+					<pre class="whitespace-pre-wrap w-full text-sm md:text-base py-2">
+						Hello, My name is Mbugua.
+						I am an Engineer based in Nairobi, Kenya.
+						I love building things.
+						I have experience working in the fields of <span class="font-semibold">Robotics</span>,
+						<span class="font-semibold">Embedded systems</span>,
+						and <span class="font-semibold">Web developement</span>.
+						<br/>
+						<br/>
+						<span class="hidden md:block">
+							I led the develpment of a <span class="font-semibold">mobile assembly robot</span> with a 6dof robotic arm
+							at Jkuat Robotics Dojo.
+							I designed and build circuits and embedded systems for milk and oil atms at Psalmchmart Ltd. I
+							specialized in back-end developement at Alx Africa gaining skills in C, python, Javascript, Node, Redis and
+							Git.
+						</span>
+					</pre>
+					<div class=" flex flex-col">
+						<div class="flex flex-col gap-2">
+							@SectionSubHeading("My education background")
+							<div class="flex flex-col gap-2 md:gap-4 mb-4">
+								<div>
+									@SectionHeading3("> BSc. Electrical and Electronic Engineering")
+									<pre class="whitespace-pre-wrap w-full text-sm md:text-base">
+										Jomo Kenyatta University of Agriculture and
+										Technology
+									</pre>
+								</div>
+								<div>
+									@SectionHeading3("> Software Engineering")
+									<pre class="whitespace-pre-wrap w-full text-sm md:text-base">ALX Africa</pre>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div
-					class="pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto">
-					<a href="assets/cv.pdf" download="mbugua.pdf"
-						class="flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-2 rounded-md px-4 md:px-6">
-						Download CV
-					</a>
-					<a id="message-btn" href="#contact"
-						class="flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-2 rounded-md px-4 md:px-6">
-						Contact me
-					</a>
-				</div>
-			</div>
-			<div class="w-full relative">
-				<div
-					class="-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto">
-					@SkillIcons()
-				</div>
-				<div class="mt-8 md:mt-7">
-					@SectionSubHeading("Skills")
-				</div>
-				<div class="grid grid-cols-4 md:grid-cols-6 gap-2 md:gap-4 py-1 md:py-4">
-					for _, skill := range data.Skills {
-					<div class="text-gray-600 p-1 bg-gray-100 text-center rounded-md shadow-gray-400 shadow-md">
-						<pre class="text-sm md:text-base">{ skill.Name }</pre>
+					<div
+						class="pr-8 md:pr-0 text-sm md:text-base flex absolute md:relative bottom-[13%] gap-2 md:gap-4 w-full md:bottom-auto"
+					>
+						<a
+							href="assets/cv.pdf"
+							download="mbugua.pdf"
+							class="flex-grow font-semibold text-gray-800 text-center shadow-gray-400 shadow-md border-2 border-gray-100 py-2 md:py-2 rounded-md px-4 md:px-6"
+						>
+							Download CV
+						</a>
+						<a
+							id="message-btn"
+							href="#contact"
+							class="flex-grow text-white font-semibold bg-blue-500 shadow-gray-400 shadow-md text-center border-blue-500 border-2 py-2 md:py-2 rounded-md px-4 md:px-6"
+						>
+							Contact me
+						</a>
 					</div>
-					}
+				</div>
+				<div class="w-full relative">
+					<div
+						class="-z-10 opacity-50 md:opacity-100 w-full mb-4 absolute  -top-10 -right-10 md:relative md:top-auto md:right-auto"
+					>
+						@SkillIcons()
+					</div>
+					<div class="mt-8 md:mt-7">
+						@SectionSubHeading("Skills")
+					</div>
+					<div class="grid grid-cols-4 md:grid-cols-6 gap-2 md:gap-4 py-1 md:py-4">
+						for _, skill := range data.Skills {
+							<div class="text-gray-600 p-1 bg-gray-100 text-center rounded-md shadow-gray-400 shadow-md">
+								<pre class="text-sm md:text-base">{ skill.Name }</pre>
+							</div>
+						}
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 }
 
 templ SkillIcons() {
-<div class="parent">
-	for i, skill := range data.Skills {
-	<div class={ fmt.Sprintf("%s%s p-2 md:border flex items-end justify-center rounded-md", "div" , fmt.Sprint(i+1)) }>
-		<img alt={ skill.Name } class="w-6 h-6 md:w-12 md:h-12" src={ fmt.Sprintf("assets/images/icons/%s", skill.Img) } />
+	<div class="parent">
+		for i, skill := range data.Skills {
+			<div class={ fmt.Sprintf("%s%s p-2 md:border flex items-end justify-center rounded-md", "div", fmt.Sprint(i+1)) }>
+				<img alt={ skill.Name } class="w-6 h-6 md:w-12 md:h-12" src={ fmt.Sprintf("assets/images/icons/%s", skill.Img) }/>
+			</div>
+		}
 	</div>
-	}
-</div>
 }
 
 templ SectionHeading3(text string) {
-<h3 class=" font-semibold">
-	<pre class="whitespace-pre-wrap w-full text-sm md:text-base">{ text }</pre>
-</h3>
+	<h3 class=" font-semibold">
+		<pre class="whitespace-pre-wrap w-full text-sm md:text-base">{ text }</pre>
+	</h3>
 }
 
 templ SectionHeading(title string) {
-<h1 class="text-3xl md:text-5xl font-semibold md:pr-2 text-right section__heading text-sky-500">
-	<pre>{ title }</pre>
-</h1>
+	<h1 class="text-3xl md:text-5xl font-semibold md:pr-2 text-right section__heading text-sky-500">
+		<pre>{ title }</pre>
+	</h1>
 }
 
 templ SectionSubHeading(title string) {
-<h2 class="text-lg md:text-2xl font-semibold">
-	{ title }
-</h2>
+	<h2 class="text-lg md:text-2xl font-semibold">
+		{ title }
+	</h2>
 }

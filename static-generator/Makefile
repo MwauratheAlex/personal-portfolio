@@ -38,7 +38,7 @@ build-esbuild:
 build:
 	make tailwind-build
 	make templ-generate
-	make build-esbuild
+#	make build-esbuild
 	go build  -o ${MAIN_PATH} ./main.go
 
 run :
